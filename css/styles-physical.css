@@ -1,0 +1,250 @@
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-regular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-italic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-bold.otf');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-bold-italic.otf');
+  font-style: italic;
+  font-weight: bold;
+}
+
+:root{
+  font-size: 18px;
+  --gray30: #212121;
+  --gray20: #212429;
+  --gray10: #616161;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  color: var(--gray30);
+  font-family: 'Roboto', sans-serif;
+  /*font-family: charter; /* REQUIERE COMILLAS SI EL NOMBRE DE LA FUENTE LLEVA UN ESPACIO, DE LO CONTRARIO NO */
+  margin: 0;
+}
+
+a{
+  color: var(--gray30);
+}
+
+header{
+  /* --gray10: red; SE PUEDE CAMBIAR EL VALOR DE LA VARIABLE EN CUALQUIER PARTE DEL CÓDIGO */
+  font-size: 14px;
+  color:var(--gray10);
+  /* border: 1px solid red;
+  background: red; */
+  position: absolute;
+  width: 188px;
+  left: -232px;
+  top: 64px;
+  /* position: fixed;*/
+  /* top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 50px; */
+  /*top left bottom right z-index */
+  /* top: 50px;
+  left: 30px;
+  bottom: 20px; */
+  /* right: 25px;
+  z-index: -1px; */
+  /*position: static;
+  position: fixed;
+  position: sticky; */
+}
+
+header a{
+  color: var(--gray10);
+  text-decoration: none;
+}
+header a:hover{
+  color: var(--gray30);
+}
+
+header li{
+  margin-bottom: 16px;
+}
+
+nav details summary{
+  font-weight: bold;
+  line-height: 24px;
+}
+
+h1 {
+  font-size: 60px;
+  margin-top: 64px;
+  margin-bottom: 16px;
+  font-weight: normal;
+  /*font-size: 3.75 em;*/
+  /* text-align: right; */
+  /* margin-left: 20px;
+  margin-right: 10px; */
+  /* margin: top, right, bottom, left; */
+  /* margin: 64px 10px 16px 20px; */
+  /* border: 10px solid red;
+  width: 400px;
+  height: 400px;
+  padding: 40px; */
+  /* border: 1px solid red; */
+}
+
+ /* h1 + p{ CON + SE AFECTA AL HERMANO DIRECTO DE h1
+  margin-bottom: 64px;
+  }  */
+
+  hr{
+    /* background: red; */
+    margin: 64px 0;
+  }
+
+h2{
+  font-size: 2em;
+  font-weight: normal;
+  margin: 64px 0 40px;
+}
+
+h3{
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+pre{
+  background: #FEC62E;
+  padding: 40px;
+  font-family: 'Roboto';
+  line-height: 24px;
+}
+
+blockquote{
+  font-size: 24px;
+  margin: 32px 0;
+  padding-left: 16px;
+  line-height: 24px;
+  /* border: 1px solid red;
+  border-top-color: aqua;
+  border-top-style: dashed;
+  border-radius: 50px; */
+  border-left: 4px solid var(--gray30);
+}
+
+blockquote span{
+  color: var(--gray10);
+}
+
+blockquote span::before{
+  content: '-';
+}
+
+.header{
+  position: sticky;
+  top: 0;
+}
+
+/* .debug{
+  border: 1px solid red;
+} */
+
+.header-content{
+  position: relative;
+}
+
+/*.main {
+  border: 1px solid red; */
+  /* width: 902px;
+  margin: auto;
+  background: purple;
+}*/
+
+.wrapper { /*Ayuda a delimitar las fronteras del contenido*/
+  width: 902px;
+  margin: auto;
+}
+
+.main-content {
+  background: white;
+}
+
+.hero{
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url(../images/pattern.png);
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  height: 350px;
+}
+
+.section-content{
+  margin-top: 164px;
+}
+
+.section-content:first-of-type{
+  margin: 0;
+}
+
+.section-content ol li{
+  line-height: 24px;
+}
+
+.section-content ul li{
+  margin-bottom: 16px;
+}
+
+.section-content + hr{
+  display: none;
+}
+
+.section-content img{
+  margin-top: 40px;
+}
+
+.section-content{
+  counter-reset: titlelist;
+}
+
+.section-content h3{
+  counter-increment: titlelist;
+  /* background: red; */
+  padding-bottom: 8px;
+}
+
+.section-content h3::before{
+  content: counter(titlelist, decimal) '. ';
+}
+
+.section-content h3::after{
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+
+
